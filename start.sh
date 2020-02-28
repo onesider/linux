@@ -30,6 +30,13 @@ apt install -y ctags
 echo "** set zsh !!"
 chsh -s `which zsh`
 
+sed -i "s/auth       required   pam_shells.so/#auth       required   pam_shells.so/g" /etc/pam.d/chsh
+
+echo "#add onesider" >> ~/.bashrc
+echo "if [ -t 1 ]; then" >> ~/.bashrc
+echo "  exec zsh" >> ~/.bashrc
+echo "fi" >> .bashrc
+
 
 #echo "** set vim !!"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -62,13 +69,6 @@ else
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.vimrc
 	echo ${HOME}
 fi
-
-sed -i "s/auth       required   pam_shells.so/#auth       required   pam_shells.so/g /etc/pam.d/chsh
-
-echo "#add onesider" >> .bashrc
-echo "if [ -t 1 ]; then" >> .bashrc
-echo "  exec zsh" >> .bashrc
-echo "fi" >> .bashrc
 
 
 :<<'END'
