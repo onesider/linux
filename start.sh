@@ -1,10 +1,7 @@
 #!/bin/bash
 onesider="/home/onesider"
 
-echo "** Using Root!!!"
-echo "** Start! Setting Terminal!! "
 echo "** apt setting!!"
-
 apt -y update
 apt -y upgrade
 apt -y dist-upgrade
@@ -23,8 +20,6 @@ apt install -y gdb
 apt install -y cscope
 apt install -y ctags
 
-
-# zsh 설정 (zsh 설치되면 이미 설치됬다고 나오네..) 
 (echo "Y")|sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "** set zsh !!"
@@ -36,7 +31,6 @@ echo "#add onesider" >> ~/.bashrc
 echo "if [ -t 1 ]; then" >> ~/.bashrc
 echo "  exec zsh" >> ~/.bashrc
 echo "fi" >> .bashrc
-
 
 #echo "** set vim !!"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -61,15 +55,9 @@ rm -rf fonts
 
 #path 편집
 if [ "${HOME}" == "${onesider}" ]; then
-	echo "user = onesider"
-	echo ${onesider}
+	echo "finished! - onesider"
 else
-	echo "user = another"
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.zshrc
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.vimrc
-	echo ${HOME}
+	echo "finished! - ${onesider}"
 fi
-
-
-:<<'END'
-END
