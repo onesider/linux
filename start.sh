@@ -55,6 +55,7 @@ rm -rf fonts
 
 #path 편집
 if [ "${HOME}" == "${onesider}" ]; then
+	chown onesider:onesider -R .vim/ .oh-my-zsh/ autojump/ 
 	echo "finished! - onesider"
 else
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.zshrc
