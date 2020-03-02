@@ -22,10 +22,10 @@ apt install -y ctags
 
 (echo "Y")|sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+sed -i "s/auth       required   pam_shells.so/#auth       required   pam_shells.so/g" /etc/pam.d/chsh
+
 echo "** set zsh !!"
 chsh -s `which zsh`
-
-sed -i "s/auth       required   pam_shells.so/#auth       required   pam_shells.so/g" /etc/pam.d/chsh
 
 echo "#add onesider" >> ~/.bashrc
 echo "if [ -t 1 ]; then" >> ~/.bashrc
