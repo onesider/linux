@@ -151,7 +151,7 @@ set shiftwidth=4 " sw; 자동 들여쓰기 간격
 set softtabstop=4 " sts; 편집 시 <Tab>을 누르면 들어가는 공백의 수
 set autoindent " 새로운 줄의 들여쓰기를 이전 줄에서 가져옴
 set cindent " C 언어 스타일 자동 들여쓰기
-set smartindent "cindent 와 비슷 하지만 #if, #ifdef, #define 등과 #으로 시작하는 전처리기 명령어에 대해서는 자동 들여쓰기를 무시하고 다음 라인의 첫 번째 열로 이동한다.
+set smartindent "cindent 와 비슷 하지만 #if, #ifdef, #define 등과 #으로 시작하는 전처리기 명령어에 대해서는 자동 들여쓰 기를 무시하고 다음 라인의 첫번째 열로 이동한다.
 set scrolloff=5 "so; 커서 위나 밑에 표시할 최소 줄 수. 정확히 뭔지 모르겠음.
 "set paste " 외부 텍스트를 붙여넣기 할 때 자동 들여쓰기 막기 이거 활성화되면 자동완성기능 못씀
 "set textwidth=120 " tw; 한 줄에 입력할 수 있는 글자 수. 띄어쓰기가 없으면 초과되도 계속 한 줄로 입력됨.
