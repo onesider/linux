@@ -46,6 +46,8 @@ rm -rf linux
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone git://github.com/joelthelion/autojump.git
+
+#이유는 모르겠는데 install.py가 잘 안되는 경우가 발생할수도 있다. 셀프로 설치해주면 된다.
 python3 ./autojump/install.py 
 
 #echo "** set font !!"
