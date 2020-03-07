@@ -42,13 +42,13 @@ echo "fi" >> .bashrc
 
 #echo "** set vim !!"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 git clone https://github.com/tomasr/molokai.git
 mv ./molokai/colors ./.vim/colors
 rm -rf ./molokai
-git clone https://github.com/onesider/linux.git
-mv ./linux/.vimrc ./.vimrc
-mv ./linux/.zshrc ./.zshrc
-rm -rf linux
+
+mv .vimrc ~/.vimrc
+mv .zshrc ~/.zshrc
 
 #Util
 wget https://github.com/knqyf263/pet/releases/download/v0.3.0/pet_0.3.0_linux_amd64.deb
@@ -64,21 +64,20 @@ wget https://github.com/sharkdp/fd/releases/download/v7.4.0/fd_7.4.0_amd64.deb
 dpkg -i fd_7.4.0_amd64.deb
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 
 rm -rf *.deb
-
-#이유는 모르겠는데 install.py가 잘 안되는 경우가 발생할수도 있다. 셀프로 설치해주면 된다.
-python3 ./autojump/install.py
 
 #echo "** set font !!"
 git clone https://github.com/powerline/fonts.git
 ./fonts/install.sh
 rm -rf fonts
 
+rm -rf ~/linux
+
 #path 편집
 if [ "${HOME}" == "${onesider}" ]; then
-	chown onesider:onesider -R .vim/ .oh-my-zsh/ autojump/
+	chown onesider:onesider -R ~/.vim/ ~/.oh-my-zsh/
 	echo "finished! - onesider"
 else
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.zshrc
