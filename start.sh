@@ -82,3 +82,5 @@ else
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.vimrc
 	echo "finished!"
 fi
+
+cd ~
