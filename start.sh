@@ -35,7 +35,7 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 sed -i "s/auth       required   pam_shells.so/#auth       required   pam_shells.so/g" /etc/pam.d/chsh
 
 echo "** set zsh !!"
-chsh -s /usr/bin/zsh
+chsh -s `which zsh`
 
 #echo "** set vim !!"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
