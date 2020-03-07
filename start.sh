@@ -49,22 +49,33 @@ mv .vimrc ~/.vimrc
 mv .zshrc ~/.zshrc
 
 #Util
-wget https://github.com/knqyf263/pet/releases/download/v0.3.0/pet_0.3.0_linux_amd64.deb
-dpkg -i pet_0.3.0_linux_amd64.deb
+#64bit
+wget https://github.com/knqyf263/pet/releases/download/v0.3.6/pet_0.3.6_linux_amd64.deb
+dpkg -i pet_0.3.6_linux_amd64.deb
+#32bit
+#wget https://github.com/knqyf263/pet/releases/download/v0.3.6/pet_0.3.6_linux_386.deb
+#dpkg -i pet_0.3.6_linux_386.deb
 
 #64bit
 wget https://github.com/Peltoche/lsd/releases/download/0.16.0/lsd-musl_0.16.0_amd64.deb
 dpkg -i lsd-musl_0.16.0_amd64.deb
-
 #32bit
 #wget https://github.com/Peltoche/lsd/releases/download/0.16.0/lsd-musl_0.16.0_i386.deb
 #dpkg -i lsd-musl_0.16.0_i386.deb
 
+#64bit
 wget https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb
 dpkg -i bat_0.12.1_amd64.deb
+#32bit
+#wget https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_i386.deb
+#dpkg -i bat_0.12.1_i386.deb
 
+#64bit
 wget https://github.com/sharkdp/fd/releases/download/v7.4.0/fd_7.4.0_amd64.deb
 dpkg -i fd_7.4.0_amd64.deb
+#32bit
+#wget https://github.com/sharkdp/fd/releases/download/v7.4.0/fd_7.4.0_i386.deb
+#dpkg -i fd_7.4.0_i386.deb
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
