@@ -2,7 +2,7 @@
 onesider="/home/onesider"
 
 echo "** apt setting!!"
-add-apt-repository ppa:x4121/ripgrep
+add-apt-repository ppa:x4121/ripgrep -y
 
 apt -y update
 apt -y upgrade
