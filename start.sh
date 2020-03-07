@@ -39,7 +39,7 @@ chsh -s /usr/bin/zsh
 echo "#add onesider" >> ~/.bashrc
 echo "if [ -t 1 ]; then" >> ~/.bashrc
 echo "  exec zsh" >> ~/.bashrc
-echo "fi" >> .bashrc
+echo "fi" >> ~/.bashrc
 
 #echo "** set vim !!"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
