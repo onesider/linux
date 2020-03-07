@@ -36,11 +36,6 @@ sed -i "s/auth       required   pam_shells.so/#auth       required   p
 echo "** set zsh !!"
 chsh -s /usr/bin/zsh
 
-echo "#add onesider" >> ~/.bashrc
-echo "if [ -t 1 ]; then" >> ~/.bashrc
-echo "  exec zsh" >> ~/.bashrc
-echo "fi" >> ~/.bashrc
-
 #echo "** set vim !!"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
@@ -78,6 +73,7 @@ rm -rf ~/linux
 
 #path 편집
 if [ "${HOME}" == "${onesider}" ]; then
+	echo "exec zsh" >> ~/.bashrc
 	chown onesider:onesider -R ~/
 	echo "finished!"
 else
