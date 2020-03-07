@@ -14,6 +14,7 @@ apt install -y git
 apt install -y curl
 apt install -y zsh
 apt install -y vim
+apt install -y python
 apt install -y python3 python3-pip
 apt install -y zip
 apt install -y unzip
@@ -33,7 +34,7 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 sed -i "s/auth       required   pam_shells.so/#auth       required   pam_shells.so/g" /etc/pam.d/chsh
 
 echo "** set zsh !!"
-chsh -s `which zsh`
+chsh -s /usr/bin/zsh
 
 echo "#add onesider" >> ~/.bashrc
 echo "if [ -t 1 ]; then" >> ~/.bashrc
@@ -44,7 +45,7 @@ echo "fi" >> .bashrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 git clone https://github.com/tomasr/molokai.git
-mv ./molokai/colors ./.vim/colors
+mv ./molokai/colors ~/.vim/colors
 rm -rf ./molokai
 
 mv .vimrc ~/.vimrc
@@ -77,7 +78,7 @@ rm -rf ~/linux
 
 #path 편집
 if [ "${HOME}" == "${onesider}" ]; then
-	chown onesider:onesider -R ~/.vim/ ~/.oh-my-zsh/
+	chown onesider:onesider -R ~/
 	echo "finished!"
 else
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.zshrc
