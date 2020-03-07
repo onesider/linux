@@ -12,6 +12,7 @@ apt -y autoremove
 echo "** install app!!"
 apt install -y git
 apt install -y curl
+apt install -y net-tools
 apt install -y zsh
 apt install -y vim
 apt install -y python
