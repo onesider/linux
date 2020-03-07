@@ -78,9 +78,9 @@ rm -rf ~/linux
 #path 편집
 if [ "${HOME}" == "${onesider}" ]; then
 	chown onesider:onesider -R ~/.vim/ ~/.oh-my-zsh/
-	echo "finished! - onesider"
+	echo "finished!"
 else
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.zshrc
 	sed -i "s|${onesider}|${HOME}|g" ${HOME}/.vimrc
-	echo "finished! - ${onesider}"
+	echo "finished!"
 fi
