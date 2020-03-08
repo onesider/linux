@@ -31,6 +31,7 @@ apt install -y neofetch
 apt install -y gawk
 
 (echo "Y")|sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 sed -i "s/auth       required   pam_shells.so/#auth       required   pam_shells.so/g" /etc/pam.d/chsh
@@ -86,6 +87,11 @@ rm -rf *.deb
 git clone https://github.com/powerline/fonts.git
 ./fonts/install.sh
 rm -rf fonts
+
+#echo "**nerd font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Ubuntu.zip ~/.local/share/fonts/
+unzip ~/.local/share/fonts/Ubuntu.zip
+rm -rf ~/.local/share/fonts/Ubuntu.zip
 
 rm -rf ~/linux
 
