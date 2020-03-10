@@ -29,6 +29,9 @@ apt install -y ripgrep
 apt install -y jq
 apt install -y neofetch
 apt install -y gawk
+apt install -y hexyl 
+apt install -y speedtest-cli
+apt install -y htop
 
 (echo "Y")|sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
