@@ -1,9 +1,23 @@
-# .zshrc (use zplug)
-export ZSH=~/.oh-my-zsh
+
+#System print
+neofetch
+
+#spelling check on
+setopt correct
+
+#weather
+alias weather='curl -s -H "Accept-Language: ko" http://wttr.in/seoul'
+
+#FZF Seting with fd
+export FZF_DEFAULT_COMMAND='fd --type f --color=never'
+export FZF_ALT_C_COMMAND='fd --type d . --color=never'
 
 #alias Start Text
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 source ~/.zplug/init.zsh
+
+# .zshrc (use zplug)
+export ZSH=~/.oh-my-zsh
 
 # Plugins
 zplug "plugins/git",   from:oh-my-zsh
