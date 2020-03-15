@@ -100,6 +100,9 @@ rm -rf ~/linux
 
 #path 편집
 if [ "${HOME}" == "${onesider}" ]; then
+	echo "export FZF_DEFAULT_COMMAND='fd --type f --color=never'" >> ~/.bashrc
+	echo "export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'"  >> ~/.bashrc
+	echo "export FZF_ALT_C_COMMAND='fd --type d . --color=never'" >> ~/.bashrc
 	echo "exec zsh" >> ~/.bashrc
 	chown onesider:onesider -R ~/
 	echo "finished!"
