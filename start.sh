@@ -32,6 +32,7 @@ apt install -y gawk
 apt install -y hexyl 
 apt install -y speedtest-cli
 apt install -y htop
+apt install -y adb
 
 (echo "Y")|sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -97,6 +98,14 @@ unzip ~/.local/share/fonts/Ubuntu.zip
 rm -rf ~/.local/share/fonts/Ubuntu.zip
 
 rm -rf ~/linux
+
+#echo "python setting
+update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+pip install --upgrade pip
+
+#echo frida install
+pip install frida-tools
 
 #path 편집
 if [ "${HOME}" == "${onesider}" ]; then
