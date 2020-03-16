@@ -102,7 +102,7 @@ rm -rf ~/linux
 #echo "python setting
 update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
-pip install --upgrade pip
+#pip3 install --upgrade pip
 
 #echo frida install
 pip install frida-tools
